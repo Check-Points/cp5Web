@@ -5,6 +5,7 @@ const LogoContainer = styled.div`
         font-size: 30px;
 `
 
+
 function Logo() {
     return (
         <LogoContainer>

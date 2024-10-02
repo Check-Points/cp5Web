@@ -16,7 +16,7 @@ const Opcoes = styled.ul`
     display: flex;
 `
 
-const textoOpcoes = ['MENU', 'CLIENTES', 'SOBRE','DOWNLOAD']
+const textoOpcoes = ['Home', 'Sobre nós', 'Feedback','Categoria','Download']
 
 function OpcoesHeader() {
     return (

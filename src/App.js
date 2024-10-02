@@ -1,4 +1,6 @@
 import Header from './components/Header';
+import Footer from './components/Footer';
+import MainPage from './components/MainPage'; 
 import styled from 'styled-components';
 
 const AppContainer = styled.div`
@@ -11,6 +13,8 @@ function App() {
   return (
     <AppContainer>
       <Header />
+      <MainPage />
+      <Footer />
     </AppContainer>
   );
 }
