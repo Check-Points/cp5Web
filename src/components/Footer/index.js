@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import email from '../../images/email-icon.png'
+import instagram from '../../images/insta-icon.png'
+import googleplay from '../../images/googlestore-icon.png'
+import applestore from '../../images//apple-icon.png'
 
 const FooterContainer = styled.footer`
   background-color: #e94c19;
@@ -63,10 +67,10 @@ const Footer = () => {
         <a href="#privacidade">Privacidade</a>
       </Links>
       <SocialIcons>
-        <a href="mailto:gourmeton@hotmail.com"><img src="/images/email-icon.png" alt="Email" /></a>
-        <a href="https://www.instagram.com/gourmeton"><img src="/images/insta-icon.png" alt="Instagram" /></a>
-        <a href="/path/to/google-play"><img src="/images/googlestore-icon.png" alt="Google Play" /></a>
-        <a href="/path/to/app-store"><img src="/images/apple-icon.png" alt="App Store" /></a>
+        <a href="mailto:gourmeton@hotmail.com"><img src={email} alt="Email" /></a>
+        <a href="https://www.instagram.com/gourmeton"><img src={instagram} alt="Instagram" /></a>
+        <a href="/path/to/google-play"><img src={googleplay} alt="Google Play" /></a>
+        <a href="/path/to/app-store"><img src={applestore} alt="App Store" /></a>
       </SocialIcons>
     </FooterContainer>
   );

@@ -1,18 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
+import bg from '../../images/background.png'
+import icon1 from '../../images/icon3.png'
+import icon2 from '../../images/icon1.png'
+import icon3 from '../../images/icon2.png'
+import pratos from '../../images/food1.png'
+import salada from '../../images/food2.png'
+import doces from '../../images/food3.png'
+import hamburger from '../../images/food4.png'
 
 const MainContainer = styled.div`
   font-family: Arial, sans-serif;
 `;
 
 const HeroSection = styled.section`
-  background-color: #e94c19;
   color: white;
-  text-align: center;
-  padding: 50px 20px;
+  padding: 10rem 1.25rem;
+  background-image: url(${bg});
+  background-size: cover;
+  background-position: center;
 
-  h1 {
-    font-size: 2.5em;
+  img { 
+    width: 80px;
+      height: 80px;
   }
 
   p {
@@ -28,10 +38,16 @@ const HeroSection = styled.section`
     cursor: pointer;
     border-radius: 5px;
     color: white;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #369b66;
+    }
   }
 `;
 
 const FeaturesSection = styled.section`
+  background-color: #fff;
   text-align: center;
   padding: 40px 20px;
 
@@ -70,6 +86,7 @@ const FeaturesSection = styled.section`
 `;
 
 const FunctionalitiesSection = styled.section`
+  background-color: #fff;
   text-align: center;
   padding: 40px 20px;
 
@@ -90,10 +107,8 @@ const FunctionalitiesSection = styled.section`
     }
 
     img {
+    margin-top: 155px;
       width: 100%;
-      border-radius: 10px;
-      max-height: 150px;
-      object-fit: cover;
     }
 
     p {
@@ -145,8 +160,7 @@ const MainPage = () => {
   return (
     <MainContainer>
       <HeroSection>
-        <h1>GourmetOn</h1>
-        <p>Explore e saboreie a melhor gastronomia da sua região!</p>
+        <p>O GourmetOn é o novo aplicativo para explorar e saborear a melhor gastronomia da sua região! Com uma interface intuitiva, você pode encontrar restaurantes, ler avaliações, fazer reservas e até pedir delivery. Experimente receitas exclusivas e participe de promoções especiais! Não perca tempo, instale nosso app e comece a sua jornada gastronômica hoje mesmo!</p>
         <button>Download</button>
       </HeroSection>
 
@@ -154,17 +168,17 @@ const MainPage = () => {
         <h2>O GourmetOn como aplicativo</h2>
         <div className="features">
           <div>
-            <img src="/path/to/fast-delivery-icon.png" alt="Entrega Rápida" />
+            <img src={icon1} alt="Entrega Rápida" />
             <h3>Entrega rápida e segura</h3>
             <p>Utiliza um sistema eficiente de logística para garantir que suas refeições cheguem quentinhas.</p>
           </div>
           <div>
-            <img src="/path/to/restaurant-icon.png" alt="Restaurantes" />
+            <img src={icon2} alt="Restaurantes" />
             <h3>Restaurantes</h3>
             <p>Uma ampla seleção de restaurantes, desde fast food até alta gastronomia.</p>
           </div>
           <div>
-            <img src="/path/to/payment-icon.png" alt="Pagamento Fácil" />
+            <img src={icon3} alt="Pagamento Fácil" />
             <h3>Forma de pagamento fácil</h3>
             <p>O processo de pagamento com múltiplas opções, como cartões de crédito e carteiras digitais.</p>
           </div>
@@ -175,19 +189,19 @@ const MainPage = () => {
         <h2>Bateu a fome? A GourmetOn está aqui!</h2>
         <div className="images">
           <div>
-            <img src="/path/to/prato.jpg" alt="Pratos" />
+            <img src={pratos} alt="Pratos" />
             <p>Pratos</p>
           </div>
           <div>
-            <img src="/path/to/salada.jpg" alt="Salada" />
+            <img src={salada} alt="Salada" />
             <p>Salada</p>
           </div>
           <div>
-            <img src="/path/to/doces.jpg" alt="Doces" />
+            <img src={doces} alt="Doces" />
             <p>Doces</p>
           </div>
           <div>
-            <img src="/path/to/hamburguer.jpg" alt="Hamburguer" />
+            <img src={hamburger} alt="Hamburguer" />
             <p>Hamburguer</p>
           </div>
         </div>
