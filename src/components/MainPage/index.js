@@ -10,8 +10,8 @@ import doces from '../../images/food3.png'
 import hamburger from '../../images/food4.png'
 
 const MainContainer = styled.div`
-  font-family: Arial, sans-serif;
-`;
+  font-family: "Montserrat", sans-serif;
+`
 
 const HeroSection = styled.section`
   color: white;
@@ -19,15 +19,19 @@ const HeroSection = styled.section`
   background-image: url(${bg});
   background-size: cover;
   background-position: center;
+  position: relative; /* Necessário para o Overlay e o Content */
 
   img { 
     width: 80px;
-      height: 80px;
+    height: 80px;
   }
 
   p {
     font-size: 1.2em;
     margin: 20px 0;
+    color: #fff; /* Cor do texto */
+    line-height: 1.4; 
+    max-width: 900px; 
   }
 
   button {
@@ -44,7 +48,22 @@ const HeroSection = styled.section`
       background-color: #369b66;
     }
   }
-`;
+`
+
+const Overlay = styled.div`
+  position: absolute; /* Posiciona o overlay de forma absoluta */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor preta com opacidade de 50% */
+  z-index: 1; /* Coloca o overlay acima da imagem de fundo */
+`
+
+const Content = styled.div`
+  position: relative;
+  z-index: 2;
+`
 
 const FeaturesSection = styled.section`
   background-color: #fff;
@@ -52,6 +71,7 @@ const FeaturesSection = styled.section`
   padding: 40px 20px;
 
   h2 {
+    font-family: "Margarine", sans-serif;
     font-size: 2em;
     margin-bottom: 20px;
     color: #849848;
@@ -154,15 +174,20 @@ const TestimonialsSection = styled.section`
       color: gold;
     }
   }
-`;
+`
 
 const MainPage = () => {
   return (
-    <MainContainer>
-      <HeroSection>
-        <p>O GourmetOn é o novo aplicativo para explorar e saborear a melhor gastronomia da sua região! Com uma interface intuitiva, você pode encontrar restaurantes, ler avaliações, fazer reservas e até pedir delivery. Experimente receitas exclusivas e participe de promoções especiais! Não perca tempo, instale nosso app e comece a sua jornada gastronômica hoje mesmo!</p>
-        <button>Download</button>
-      </HeroSection>
+      <MainContainer>
+          <HeroSection>
+          <Overlay/>
+          <Content>
+            <p>O GourmetOn é o novo aplicativo para explorar e saborear a melhor gastronomia da sua região! Com uma interface intuitiva, você pode encontrar restaurantes, ler avaliações, fazer reservas e até pedir delivery. Experimente receitas exclusivas e participe de promoções especiais!</p>
+            <p>Não perca tempo, instale nosso app e comece a sua jornada gastronômica hoje mesmo!</p>
+            <button>Download</button>
+          </Content>
+          </HeroSection>
+        
 
       <FeaturesSection>
         <h2>O GourmetOn como aplicativo</h2>
