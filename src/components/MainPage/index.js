@@ -8,6 +8,8 @@ import pratos from '../../images/food1.png'
 import salada from '../../images/food2.png'
 import doces from '../../images/food3.png'
 import hamburger from '../../images/food4.png'
+import comida from '../../images/image-comida.png'
+
 
 const MainContainer = styled.div`
   font-family: "Montserrat", sans-serif;
@@ -71,7 +73,7 @@ const FeaturesSection = styled.section`
   padding: 40px 20px;
 
   h2 {
-    font-family: "Margarine", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 2em;
     margin-bottom: 20px;
     color: #849848;
@@ -93,14 +95,16 @@ const FeaturesSection = styled.section`
     }
 
     h3 {
+      font-family: "Montserrat", sans-serif;
       margin: 10px 0;
       font-size: 1.2em;
-      color: #e94c19;
+      color: #000;
     }
 
     p {
+      font-family: "Montserrat", sans-serif;
       font-size: 0.9em;
-      color: #444;
+      color: #000;
     }
   }
 `;
@@ -111,6 +115,7 @@ const FunctionalitiesSection = styled.section`
   padding: 40px 20px;
 
   h2 {
+    font-family: "Montserrat", sans-serif;
     font-size: 1.5em;
     color: #e94c19;
     margin-bottom: 20px;
@@ -175,6 +180,67 @@ const TestimonialsSection = styled.section`
     }
   }
 `
+
+const FormContatoSection = styled.section`
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #fff;
+
+  img {
+    width: 50%;
+    object-fit: cover;
+  }
+
+  form {
+    background-color: #c62828;
+    padding: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    label {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    input {
+      height: 40px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button {
+      background-color: #ff8c00;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #e67e22;
+      }
+    }
+  }
+`;
 
 const MainPage = () => {
   return (
@@ -250,6 +316,20 @@ const MainPage = () => {
           <p className="rating">★★★★★</p>
         </div>
       </TestimonialsSection>
+
+      <FormContatoSection>
+        <img src= {comida} alt="Comida" />
+        <form>  
+          <h2>Formulário de Contato</h2>
+          <label>Nome Completo:</label>
+          <input type="text" placeholder="Seu nome" />
+          <label>E-mail:</label>
+          <input type="email" placeholder="Seu e-mail" />
+          <label>Mensagem Opcional:</label>
+          <textarea placeholder="Escreva sua mensagem" />
+          <button type="submit">Enviar</button>
+        </form>
+      </FormContatoSection>
     </MainContainer>
   );
 };
