@@ -50,6 +50,19 @@ const HeroSection = styled.section`
       background-color: #369b66;
     }
   }
+
+  @media (max-width: 768px) {
+    padding: 5rem 1rem;
+    text-align: center;
+
+    p {
+      font-size: 1em;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
 `
 
 const Overlay = styled.div`
@@ -107,6 +120,21 @@ const FeaturesSection = styled.section`
       color: #000;
     }
   }
+
+  @media (max-width: 768px) {
+    .features {
+      flex-direction: column;
+
+      div {
+        width: 100%;
+      }
+
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
 `;
 
 const FunctionalitiesSection = styled.section`
@@ -143,6 +171,23 @@ const FunctionalitiesSection = styled.section`
       color: #333;
     }
   }
+
+   @media (max-width: 768px) {
+    .images {
+      flex-direction: column;
+
+      div {
+        width: 100%;
+        margin: 20px 0;
+      }
+
+      img {
+        margin-top: 0;
+        width: 100%;
+        max-width: 150px; /* Diminuindo o tamanho das imagens para mobile */
+      }
+    }
+  }
 `;
 
 const TestimonialsSection = styled.section`
@@ -177,6 +222,56 @@ const TestimonialsSection = styled.section`
 
     .rating {
       color: gold;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .testimonial {
+      width: 90%; /* Para tablets */
+    }
+
+    h2 {
+      font-size: 1.5em;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .testimonial {
+      width: 100%; /* Para dispositivos móveis */
+    }
+
+    h2 {
+      font-size: 1.4em;
+      margin-bottom: 20px;
+    }
+
+    .testimonial {
+      padding: 15px; /* Reduzindo o padding em dispositivos menores */
+    }
+
+    .user {
+      font-size: 1em;
+    }
+
+    .rating {
+      font-size: 1.2em;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px 10px;
+
+    h2 {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+    }
+
+    .testimonial {
+      padding: 10px;
+    }
+
+    .rating {
+      font-size: 1em;
     }
   }
 `
@@ -240,6 +335,31 @@ const FormContatoSection = styled.section`
       }
     }
   }
+
+  @media (max-width: 768px) {
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+
+  img {
+    width: 70%; /* Largura ajustada para 70% */
+    margin-bottom: 20px;
+  }
+
+  form {
+    width: 70%; /* Igualando a largura do formulário à da imagem */
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  input, textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
 `;
 
 const MainPage = () => {
