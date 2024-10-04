@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import email from '../../images/email-icon.png'
 import instagram from '../../images/insta-icon.png'
 import googleplay from '../../images/googlestore-icon.png'
-import applestore from '../../images//apple-icon.png'
+import applestore from '../../images/apple-icon.png'
+
 
 const FooterContainer = styled.footer`
   background-color: #e94c19;
-  color: white;
+  color: white;   
   text-align: center;
   padding: 20px 0;
   font-size: 14px;

@@ -86,7 +86,7 @@ const FeaturesSection = styled.section`
   padding: 40px 20px;
 
   h2 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Margarine", sans-serif;
     font-size: 2em;
     margin-bottom: 20px;
     color: #849848;
@@ -189,7 +189,7 @@ const FunctionalitiesSection = styled.section`
     }
   }
 `;
-
+// arrumar
 const TestimonialsSection = styled.section`
   background-color: #849848;
   color: white;
@@ -225,11 +225,6 @@ const TestimonialsSection = styled.section`
     }
   }
 
-  @media (max-width: 1024px) {
-    .testimonial {
-      width: 90%; /* Para tablets */
-    }
-
     h2 {
       font-size: 1.5em;
     }
@@ -257,9 +252,6 @@ const TestimonialsSection = styled.section`
       font-size: 1.2em;
     }
   }
-
-  @media (max-width: 480px) {
-    padding: 20px 10px;
 
     h2 {
       font-size: 1.2em;

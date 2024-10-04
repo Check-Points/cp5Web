@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+//deixar responsivo
+
 const Opcao = styled.li`
     font-size: 16px;
     display: flex;
