@@ -1,4 +1,4 @@
-##Descrição da Aplicação##
+##Descrição da Aplicação
 O GourmetOn é um aplicativo de entrega de alimentos que visa proporcionar uma experiência gastronômica excepcional aos usuários. A aplicação é construída utilizando React e styled-components, permitindo um design moderno e responsivo.
 
 ##Estrutura do Código##
