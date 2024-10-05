@@ -85,13 +85,6 @@ const FeaturesSection = styled.section`
   text-align: center;
   padding: 40px 20px;
 
-  h2 {
-    font-family: "Margarine", sans-serif;
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #849848;
-  }
-
   .features {
     display: flex;
     justify-content: space-around;
@@ -144,7 +137,7 @@ const FunctionalitiesSection = styled.section`
 
   h2 {
     font-family: "Montserrat", sans-serif;
-    font-size: 1.5em;
+    font-size: 1.9em;
     color: #e94c19;
     margin-bottom: 20px;
   }
@@ -168,7 +161,7 @@ const FunctionalitiesSection = styled.section`
       margin-top: 10px;
       font-size: 1em;
       font-weight: bold;
-      color: #333;
+      color: #000;
     }
   }
 
@@ -287,9 +280,10 @@ const FormContatoSection = styled.section`
     flex-direction: column;
     justify-content: center;
 
-    h2 {
+    h1 {
       color: #fff;
       margin-bottom: 20px;
+      font-size: 1.5rem;
     }
 
     label {
@@ -352,7 +346,7 @@ const FormContatoSection = styled.section`
     padding: 8px;
   }
 }
-`;
+`
 
 const MainPage = () => {
   return (
@@ -368,7 +362,6 @@ const MainPage = () => {
         
 
       <FeaturesSection>
-        <h2>O GourmetOn como aplicativo</h2>
         <div className="features">
           <div>
             <img src={icon1} alt="Entrega Rápida" />
@@ -411,7 +404,7 @@ const MainPage = () => {
       </FunctionalitiesSection>
 
       <TestimonialsSection>
-        <h2>O que estão falando...</h2>
+        <h2>Feedback</h2>
         <div className="testimonial">
           <p className="user">Usuário.</p>
           <p>Adorei a agilidade na entrega! Meu pedido chegou quentinho e dentro do tempo estimado.</p>
@@ -432,7 +425,7 @@ const MainPage = () => {
       <FormContatoSection>
         <img src= {comida} alt="Comida" />
         <form>  
-          <h2>Formulário de Contato</h2>
+          <h1>Formulário de Contato</h1>
           <label>Nome Completo:</label>
           <input type="text" placeholder="Seu nome" />
           <label>E-mail:</label>

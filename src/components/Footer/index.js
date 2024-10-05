@@ -14,18 +14,25 @@ const FooterContainer = styled.footer`
   font-size: 14px;
 `;
 
-const Logo = styled.h1`
-  font-family: 'Arial', sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
-  display: inline-block;
-  color: white;
-`;
+const LogoContainer = styled.div`
+  display: flex;
+  justify-content: center;  /* Centraliza horizontalmente */
+  align-items: center;      /* Centraliza verticalmente */
+  font-size: 30px;
+  font-family: "Borel", cursive;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px; /* Adiciona um espaço entre a logo e o copyright */
+`
+
+const SubLogo = styled.strong`
+    color: #25BA00;
+`
 
 const Copyright = styled.p`
   margin: 10px 0;
   font-size: 12px;
+  font-family: "Montserrat", sans-serif;
 `;
 
 const Links = styled.div`
@@ -36,6 +43,7 @@ const Links = styled.div`
     margin: 0 15px;
     text-decoration: none;
     font-size: 12px;
+    font-family: "Montserrat", sans-serif;
   }
 
   a:hover {
@@ -59,7 +67,9 @@ const SocialIcons = styled.div`
 const Footer = () => {
   return (
     <FooterContainer>
-      <Logo>GourmetOn</Logo>
+      <LogoContainer>
+            <p>Gourmet<SubLogo>On</SubLogo></p>
+        </LogoContainer>
       <Copyright>
         © Copyright 2021 - GourmetOn - Todos os direitos reservados GourmetOn com Agência de Restaurantes Online S.A.
       </Copyright>

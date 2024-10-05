@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components'
 import OpcoesHeader from '../OpcoesHeader'
-import Logo from '../Logo'
 
 const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Borel&family=Margarine&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -19,7 +18,6 @@ function Header() {
     return (
         <HeaderContainer>
             <GlobalStyle/>
-                <Logo/>
                 <OpcoesHeader/>
         </HeaderContainer>
     )
