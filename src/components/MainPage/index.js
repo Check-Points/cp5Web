@@ -1,5 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 import bg from '../../images/background.png'
 import icon1 from '../../images/icon3.png'
 import icon2 from '../../images/icon1.png'
@@ -347,8 +348,54 @@ const FormContatoSection = styled.section`
   }
 }
 `
+const MealsSection = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+
+  .meal-card {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 200px; /* Ajuste a largura conforme necessário */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    img {
+      width: 100%;
+      height: auto; /* Garante que a imagem mantenha a proporção */
+      border-radius: 8px 8px 0 0; /* Bordas arredondadas apenas na parte superior */
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 1em;
+      font-weight: bold;
+      color: #333;
+    }
+  }
+`;
 
 const MainPage = () => {
+  const [meals, setMeals] = useState([]); // Estado para armazenar as refeições
+  const [error, setError] = useState(null); // Estado para armazenar erros
+
+  useEffect(() => {
+    const fetchMeals = async () => {
+      try {
+        const response = await axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood'); // Exemplo de categoria
+        setMeals(response.data.meals); // Armazenar os dados recebidos no estado
+      } catch (error) {
+        console.error('Erro ao buscar as refeições:', error);
+        setError('Não foi possível carregar as refeições.'); // Definindo a mensagem de erro
+      }
+    };
+
+    fetchMeals(); // Chamar a função ao montar o componente
+  }, []); // Dependência vazia para chamar apenas uma vez
+
   return (
       <MainContainer>
           <HeroSection id="home">
@@ -380,6 +427,20 @@ const MainPage = () => {
           </div>
         </div>
       </FeaturesSection>
+
+      <MealsSection>
+        {meals.length > 0 ? (
+          meals.map((meal) => (
+            <div key={meal.idMeal} className="meal-card">
+              <img src={meal.strMealThumb} alt={meal.strMeal} />
+              <p>{meal.strMeal}</p>
+            </div>
+          ))
+        ) : (
+          <p>Nenhuma refeição encontrada.</p>
+        )}
+      </MealsSection>
+
 
       <FunctionalitiesSection id="categoria">
         <h2>Bateu a fome? A GourmetOn está aqui!</h2>

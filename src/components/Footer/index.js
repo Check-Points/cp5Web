@@ -16,13 +16,13 @@ const FooterContainer = styled.footer`
 
 const LogoContainer = styled.div`
   display: flex;
-  justify-content: center;  /* Centraliza horizontalmente */
-  align-items: center;      /* Centraliza verticalmente */
+  justify-content: center;  
+  align-items: center;      
   font-size: 30px;
   font-family: "Borel", cursive;
   color: #fff;
   text-align: center;
-  margin-bottom: 20px; /* Adiciona um espaço entre a logo e o copyright */
+  margin-bottom: 20px; 
 `
 
 const SubLogo = styled.strong`
