@@ -14,6 +14,7 @@ import comida from '../../images/image-comida.png'
 
 const MainContainer = styled.div`
   font-family: "Montserrat", sans-serif;
+  background-color: #fff;
 `
 
 const HeroSection = styled.section`
@@ -353,6 +354,7 @@ const MealsSection = styled.section`
   flex-wrap: wrap;
   justify-content: center;
   margin: 20px 0;
+  background-color: #fff;
 
   .meal-card {
     background-color: #f8f8f8;
@@ -379,22 +381,22 @@ const MealsSection = styled.section`
 `;
 
 const MainPage = () => {
-  const [meals, setMeals] = useState([]); // Estado para armazenar as refeições
-  const [error, setError] = useState(null); // Estado para armazenar erros
+  const [meals, setMeals] = useState([]); 
+  const [error, setError] = useState(null); 
 
   useEffect(() => {
     const fetchMeals = async () => {
       try {
-        const response = await axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood'); // Exemplo de categoria
-        setMeals(response.data.meals); // Armazenar os dados recebidos no estado
+        const response = await axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood'); 
+        setMeals(response.data.meals); 
       } catch (error) {
         console.error('Erro ao buscar as refeições:', error);
-        setError('Não foi possível carregar as refeições.'); // Definindo a mensagem de erro
+        setError('Não foi possível carregar as refeições.'); 
       }
     };
 
-    fetchMeals(); // Chamar a função ao montar o componente
-  }, []); // Dependência vazia para chamar apenas uma vez
+    fetchMeals(); 
+  }, []); 
 
   return (
       <MainContainer>
