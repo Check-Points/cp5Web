@@ -15,7 +15,6 @@ GourmetOn é um aplicativo web moderno para explorar e saborear a melhor gastron
 - [Como Usar](#como-usar)
 - [Estrutura do Projeto](#estrutura-do-projeto)
 - [Contribuição](#contribuição)
-- [Licença](#licença)
 
 ## Tecnologias Utilizadas
 
@@ -156,22 +155,6 @@ Contribuições são bem-vindas! Siga os passos abaixo para contribuir:
    ```
 
 5. **Abra um Pull Request.**
-
-## Licença
-
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
-Feito com ❤️ por [Seu Nome](https://github.com/seu-usuario)
-
-# Screenshot
-
-![GourmetOn](./screenshot.png)
-
-# Contato
-
-Para mais informações, entre em contato através do e-mail [seu-email@exemplo.com](mailto:seu-email@exemplo.com).
 
 # Observações
 
