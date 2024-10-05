@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "../Logo/index.js"; 
-
+import { Link } from "react-scroll";
 
 const Nav = styled.nav`
   position: fixed;
@@ -56,7 +56,13 @@ const Opcoes = styled.ul`
   }
 `;
 
-const textoOpcoes = ["Home", "Sobre nós", "Feedback", "Categoria", "Download"];
+const textoOpcoes = [
+    { id: "home", label: "Home" },
+    { id: "sobre", label: "Sobre nós" },
+    { id: "feedback", label: "Feedback" },
+    { id: "categoria", label: "Categoria" },
+    { id: "home", label: "Download" }
+  ];
 
 function OpcoesHeader() {
   const [scrollY, setScrollY] = useState(0);
@@ -77,11 +83,17 @@ function OpcoesHeader() {
 
   return (
     <Nav opacity={opacity}>
-      <Logo/> 
+      <Logo />
       <Opcoes>
-        {textoOpcoes.map((texto) => (
-          <Opcao key={texto}>
-            <p>{texto}</p>
+        {textoOpcoes.map((item) => (
+          <Opcao key={item.id}>
+            <Link
+              to={item.id}
+              smooth={true} // Scroll suave
+              duration={500} // Duração do scroll em ms
+            >
+              {item.label}
+            </Link>
           </Opcao>
         ))}
       </Opcoes>

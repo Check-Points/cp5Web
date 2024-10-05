@@ -351,7 +351,7 @@ const FormContatoSection = styled.section`
 const MainPage = () => {
   return (
       <MainContainer>
-          <HeroSection>
+          <HeroSection id="home">
           <Overlay/>
           <Content>
             <p>O GourmetOn é o novo aplicativo para explorar e saborear a melhor gastronomia da sua região! Com uma interface intuitiva, você pode encontrar restaurantes, ler avaliações, fazer reservas e até pedir delivery. Experimente receitas exclusivas e participe de promoções especiais!</p>
@@ -361,7 +361,7 @@ const MainPage = () => {
           </HeroSection>
         
 
-      <FeaturesSection>
+      <FeaturesSection  id="sobre">
         <div className="features">
           <div>
             <img src={icon1} alt="Entrega Rápida" />
@@ -381,7 +381,7 @@ const MainPage = () => {
         </div>
       </FeaturesSection>
 
-      <FunctionalitiesSection>
+      <FunctionalitiesSection id="categoria">
         <h2>Bateu a fome? A GourmetOn está aqui!</h2>
         <div className="images">
           <div>
@@ -403,7 +403,7 @@ const MainPage = () => {
         </div>
       </FunctionalitiesSection>
 
-      <TestimonialsSection>
+      <TestimonialsSection id="feedback">
         <h2>Feedback</h2>
         <div className="testimonial">
           <p className="user">Usuário.</p>
@@ -422,7 +422,7 @@ const MainPage = () => {
         </div>
       </TestimonialsSection>
 
-      <FormContatoSection>
+      <FormContatoSection id="home">
         <img src= {comida} alt="Comida" />
         <form>  
           <h1>Formulário de Contato</h1>
